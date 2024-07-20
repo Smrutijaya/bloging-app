@@ -1,0 +1,23 @@
+{
+  "name": "blogging-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon backend/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Smrutijaya Routray",
+  "license": "ISC",
+  "description": "A simple blogging application",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "mongoose": "^7.2.3",
+    "dotenv": "^16.0.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "type": "module" 
+}
