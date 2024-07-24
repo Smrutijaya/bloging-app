@@ -15,13 +15,13 @@ const UserSchema = new mongoose.Schema({
         required: true,
         minLength: 6
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
+    blogs: [{
+        type: mongoose.Types.ObjectId,
+        ref: "Blog",
+        required: true
+    }]
 });
 
 const User = mongoose.model('User', UserSchema);
 
-export default User; // Ensure default export
- 
+export default User;

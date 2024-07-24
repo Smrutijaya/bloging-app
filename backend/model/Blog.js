@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema({
+const blogSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -12,16 +12,14 @@ const Schema = mongoose.Schema({
     image: {
         type: String,
         required: true,
-       
     },
     user: {
-        type: String,
-        required: true,
-       
+        type: mongoose.Types.ObjectId,                  // user field is designed to create a relationship between a blog post and a user.
+        ref: "User",
+        required: true,                                 
     }
 });
 
+const Blog = mongoose.model('Blog', blogSchema);
 
-
-export default mongoose.model("Blog",blogSchema); // Ensure default export
- 
+export default Blog;
